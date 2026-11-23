@@ -1,31 +1,35 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# NeurixOne status page (founder, 24 Nov 2026: Upptime, option A). Runs on GitHub, outside NeurixOne's own servers,
+# so it stays up when they are down. Only public addresses are listed here, never secrets.
+owner: neurixone
+repo: neurixone-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://neurixone.com
+  - name: Account and apps
+    url: https://account.neurixone.com
+  - name: Sign-in
+    url: https://auth.neurixone.com/.well-known/openid-configuration
+  - name: Neurix Live
+    url: https://live.neurixone.com
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.neurixone.com
+  logoUrl: https://raw.githubusercontent.com/neurixone/neurixone-status/master/assets/neurixone-mark.svg
+  favicon: https://raw.githubusercontent.com/neurixone/neurixone-status/master/assets/neurixone-mark.svg
+  name: NeurixOne status
+  theme: dark
+  introTitle: "Is NeurixOne working?"
+  introMessage: Live status of the NeurixOne website, your account and sign-in, and Neurix Live, checked every five minutes from outside our own servers. When something goes wrong, we post what happened and when it is fixed.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: NeurixOne
+      href: https://neurixone.com
+  # The NeurixOne theme (v1.2): always dark, neutral surfaces.
+  customHeadHtml: >-
+    <style>:root{--body-background-color:#111;--card-background-color:#181818;--nav-background-color:#111;--body-text-color:#ededed;--card-border-color:#2c2c2c}</style>
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Issues for incidents are opened by the robots and assigned to the founder's account.
+assignees:
+  - neurixmedia
