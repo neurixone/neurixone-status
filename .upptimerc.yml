@@ -10,8 +10,11 @@ sites:
     url: https://account.neurixone.com
   - name: Sign-in
     url: https://auth.neurixone.com/.well-known/openid-configuration
+  # The service's own health answer (open past Cloudflare Access), not the app page: it is "ok" only when Neurix Live
+  # itself answers, so a cached or sign-in page can never look like up (P1 task 4, founder 26 Nov 2026).
   - name: Neurix Live
-    url: https://live.neurixone.com
+    url: https://live.neurixone.com/health
+    __dangerous__body_down_if_text_missing: ok
 
 status-website:
   cname: status.neurixone.com
