@@ -55,7 +55,7 @@
   },
   {
     "name": "Neurix Live",
-    "url": "https://live.neurixone.com",
+    "url": "https://live.neurixone.com/health",
     "icon": "https://icons.duckduckgo.com/ip3/live.neurixone.com.ico",
     "slug": "neurix-live",
     "status": "up",
